@@ -15,7 +15,7 @@
         android:layout_margin="8dp"
         android:fontFamily="cursive"
         android:gravity="center_vertical|end"
-        android:text="34809870"
+        android:text=""
         android:maxLength="17"
         android:singleLine="true"
         android:textColor="#FFFF"
@@ -26,10 +26,10 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_margin="8dp"
-        android:layout_height="wrap_content">
+        android:layout_height="80dp">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:layout_height="match_parent"
             android:text="7"
             android:id="@+id/btn_seven"
             android:textStyle="bold"

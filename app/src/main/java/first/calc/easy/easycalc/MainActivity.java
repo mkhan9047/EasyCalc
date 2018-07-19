@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.mariuszgromada.math.mxparser.Expression;
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView output;
@@ -15,16 +18,21 @@ public class MainActivity extends AppCompatActivity {
     Button one, two, three, four, five, six, seven, eight, nine, zero, plus, minus, mul, divide, clear, point, equal;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+
+        setContentView(R.layout.activity_main);
         output = findViewById(R.id.output);
+
+
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "digital.ttf");
         output.setTypeface(custom_font);
 
         InitView();
+
         onSevenClick();
         onOneClick();
         onTwoClick();
@@ -40,7 +48,12 @@ public class MainActivity extends AppCompatActivity {
         onMinusClick();
         onMulClick();
         onDivideClick();
+        onOutputClick();
+
+
     }
+
+
 
 
     private void onClear(){
@@ -66,9 +79,10 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                output.setText(output.getText().toString() +"1");
+                output.setText(output.getText().toString() + "1");
             }
         });
+
     }
 
     private void onTwoClick(){
@@ -180,6 +194,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    private void onOutputClick(){
+        equal.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("DefaultLocale")
+            @Override
+            public void onClick(View view) {
+                output.setText(String.format("%.2f",MathParser.ParseExp(MathParser.placeHolder(output.getText().toString()))));;
+            }
+        });
+    }
 
     private void InitView(){
         one = findViewById(R.id.btn_one);
