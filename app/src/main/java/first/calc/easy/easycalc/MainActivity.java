@@ -1,6 +1,7 @@
 package first.calc.easy.easycalc;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,18 +17,13 @@ public class MainActivity extends AppCompatActivity {
     TextView output;
 
     Button one, two, three, four, five, six, seven, eight, nine, zero, plus, minus, mul, divide, clear, point, equal;
-
-
+    int x;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_main);
         output = findViewById(R.id.output);
-
-
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "digital.ttf");
         output.setTypeface(custom_font);
 
@@ -51,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         onOutputClick();
 
 
+
+       Student sojib = new Student("Sojib","Rohim","A+",12, 1);
+
+
+
+
     }
 
 
@@ -60,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                output.setText("");
+             Intent intent = new Intent(MainActivity.this, ListExample.class);
+             startActivity(intent);
             }
         });
     }
