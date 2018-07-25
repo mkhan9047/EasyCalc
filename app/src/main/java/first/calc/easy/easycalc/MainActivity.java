@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-       Student sojib = new Student("Sojib","Rohim","A+",12, 1);
+
 
 
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             Intent intent = new Intent(MainActivity.this, ListExample.class);
+             Intent intent = new Intent(MainActivity.this, StudentActivity.class);
              startActivity(intent);
             }
         });

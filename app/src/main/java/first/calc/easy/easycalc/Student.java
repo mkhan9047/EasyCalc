@@ -5,26 +5,26 @@ package first.calc.easy.easycalc;
  */
 
 public class Student {
-    String name;
-    String Father_name;
-    String blood_group;
-    int age;
-    int id;
 
+    private String name;
+    private String reg_no;
+    private int image;
 
-    public Student(String name, String father_name, String blood_group, int age, int id) {
+    public Student(String name, String reg_no, int image) {
         this.name = name;
-        Father_name = father_name;
-        this.blood_group = blood_group;
-        this.age = age;
-        this.id = id;
+        this.reg_no = reg_no;
+        this.image = image;
     }
 
-    public void setAge(int age){
-        if(age >= 18 && age <= 60 ){
-            this.age = age;
-        }
+    public String getName() {
+        return name;
     }
 
+    public String getReg_no() {
+        return reg_no;
+    }
 
+    public int getImage() {
+        return image;
+    }
 }

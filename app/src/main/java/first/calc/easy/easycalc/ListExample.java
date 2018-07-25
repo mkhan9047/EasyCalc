@@ -33,10 +33,6 @@ public class ListExample extends AppCompatActivity {
         data.add("Muhit");
         data.add("Sojib");
 
-
-
-
-
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
 
         firstLIst.setAdapter(adapter);

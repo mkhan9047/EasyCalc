@@ -13,11 +13,7 @@ public class MathParser {
 
 
     public static double ParseExp(String s){
-
         Expression ec = new Expression(s);
-
-
-
         return ec.calculate();
     }
 
@@ -26,15 +22,10 @@ public class MathParser {
     public static String placeHolder(String s){
         if(s.contains("×")){
            return s.replace("×","*");
-
         }
         return s;
     }
 
-
-    public void add(){
-
-    }
 
 
 }

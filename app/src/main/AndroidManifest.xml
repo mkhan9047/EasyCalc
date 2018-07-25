@@ -21,7 +21,8 @@
         <activity
             android:name=".List"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ListExample"></activity>
+        <activity android:name=".ListExample" />
+        <activity android:name=".StudentActivity"></activity>
     </application>
 
 </manifest>
